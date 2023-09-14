@@ -18,12 +18,12 @@ git clone https://github.com/HyperTextMachineLearning/Incubyte-Chandrayaan_3-Ass
 
 ### Using
 
-In `main.py` as you desire:
-    - At line 23 edit `commands`
-    - At line 24 edit `initial_coordinates` &
-    - `2ND` argument to `MainProgram()` at line 25 (Note: Use any value in All-Caps except UP or DOWN)
+In `main.py` as you desire:   
+    - At line 23 edit `commands`   
+    - At line 24 edit `initial_coordinates` &   
+    - `2ND` argument to `MainProgram()` at line 25 (Note: Use any value in All-Caps except UP or DOWN)   
 
-Then at terminal run:
+Then at terminal run:   
 
 ```
 python3 src/main.py
@@ -47,5 +47,5 @@ All modules are incrementally built and built upon by unit tests.
 
 ## Contact / Feedback
 
-For any professional queries: work.ritik.matere@gmail.com
+For any professional queries: work.ritik.matere@gmail.com   
 For any dev queries: dev.ritik.matere@gmail.com
