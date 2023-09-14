@@ -17,7 +17,7 @@ class Translator:
         }
 
     def getCurDirection(self):
-        return self.getCurDirection
+        return self.curDirection
     
     def getCoordinates(self):
         return self.coords

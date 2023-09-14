@@ -1,2 +1,2 @@
-from . import Translator
+from .Translator import Translator
 from .constants import *
