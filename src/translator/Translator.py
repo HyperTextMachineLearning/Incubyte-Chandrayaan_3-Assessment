@@ -1,4 +1,4 @@
-from constants import *
+from .constants import *
 
 class Translator:
     def __init__(self, coords, curDirection):
