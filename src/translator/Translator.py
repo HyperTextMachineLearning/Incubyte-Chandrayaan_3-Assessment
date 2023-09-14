@@ -2,7 +2,6 @@ from constants import *
 
 class Translator:
     def __init__(self, coords, curDirection):
-        self.directions = [0, 1, 2, 3, 4, 5] # N E S W U D
         self.coords = coords
         self.curDirection = curDirection
         # auxDirection helps in determining rotation direction
@@ -47,7 +46,7 @@ class Translator:
             if direction == WEST:
                 return NORTH
             return direction + 1
-            
+
         if self.curDirection in [UP, DOWN]:
             self.curDirection = rightHelper(self.auxDirection)
         else:
