@@ -32,27 +32,27 @@ class Translator:
             self.coords[direction] += 1
 
     def left(self):
-        if self.curDirection in [UP, DOWN]:
-            self.curDirection = self.leftHelper(self.auxDirection)
-        else:
-            self.curDirection = self.leftHelper(self.curDirection)
+        def leftHelper(direction):
+            if direction == NORTH:
+                return WEST
+            return direction - 1
 
-    def leftHelper(self, direction):
-        if direction == NORTH:
-            return WEST
-        return direction - 1
+        if self.curDirection in [UP, DOWN]:
+            self.curDirection = leftHelper(self.auxDirection)
+        else:
+            self.curDirection = leftHelper(self.curDirection)
 
     def right(self):
+        def rightHelper(direction):
+            if direction == WEST:
+                return NORTH
+            return direction + 1
+            
         if self.curDirection in [UP, DOWN]:
-            self.curDirection = self.rightHelper(self.auxDirection)
+            self.curDirection = rightHelper(self.auxDirection)
         else:
-            self.curDirection = self.rightHelper(self.curDirection)
+            self.curDirection = rightHelper(self.curDirection)
     
-    def rightHelper(self, direction):
-        if direction == WEST:
-            return NORTH
-        return direction + 1
-
     def up(self):
         self.auxDirection = self.curDirection
         self.curDirection = 4
