@@ -21,5 +21,6 @@ class MainProgram:
 
 if __name__ == '__main__':
     commands = ['f', 'r', 'u', 'b', 'l']
-    mp = MainProgram([0,0,0], NORTH, commands)
+    initial_coordinates = [0, 0, 0]
+    mp = MainProgram(initial_coordinates, NORTH, commands)
     print(mp.executeCommands())

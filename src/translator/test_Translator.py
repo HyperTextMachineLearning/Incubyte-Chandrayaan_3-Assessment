@@ -1,6 +1,6 @@
 from .constants import *
 import unittest
-from Translator import Translator
+from .Translator import Translator
 
 class TranslationTest(unittest.TestCase):
     def setUp(self):

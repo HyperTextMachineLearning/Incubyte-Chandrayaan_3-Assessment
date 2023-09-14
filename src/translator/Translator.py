@@ -8,29 +8,29 @@ class Translator:
         # if curDirection is up/down
         self.auxDirection = curDirection
         self.directionToCoordMap = {
-            NORTH: 1,
-            SOUTH: 1,
-            EAST: 0,
-            WEST: 0,
-            UP: 2,
-            DOWN: 2
+            NORTH: [1, 'North'],
+            SOUTH: [1, 'South'],
+            EAST: [0, 'East'],
+            WEST: [0, 'West'],
+            UP: [2, 'Up'],
+            DOWN:[2, 'Down'],
         }
 
     def getCurDirection(self):
-        return self.curDirection
+        return self.directionToCoordMap[self.curDirection][1]
     
     def getCoordinates(self):
         return self.coords
 
     def forward(self):
-        direction = self.directionToCoordMap[self.curDirection]
+        direction = self.directionToCoordMap[self.curDirection][0]
         if self.curDirection in [NORTH, EAST, UP]:
             self.coords[direction] += 1
         else:
             self.coords[direction] -= 1
         
     def backward(self):
-        direction = self.directionToCoordMap[self.curDirection]
+        direction = self.directionToCoordMap[self.curDirection][0]
         if self.curDirection in [NORTH, EAST, UP]:
             self.coords[direction] -= 1
         else:

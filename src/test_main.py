@@ -10,4 +10,4 @@ class MainTest(unittest.TestCase):
     
     def test_movement(self):
         result = self.scraft.executeCommands()
-        self.assertEqual(result, '[0, 1, -1] | 0')
+        self.assertEqual(result, '[0, 1, -1] | North')
