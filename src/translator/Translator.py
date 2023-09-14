@@ -16,3 +16,17 @@ class Translator:
             UP: 2,
             DOWN: 2
         }
+
+    def forward(self):
+        direction = self.directionToCoordMap[self.curDirection]
+        if self.curDirection in [NORTH, EAST, UP]:
+            self.coords[direction] += 1
+        else:
+            self.coords[direction] -= 1
+        
+    def backward(self):
+        direction = self.directionToCoordMap[self.curDirection]
+        if self.curDirection in [NORTH, EAST, UP]:
+            self.coords[direction] -= 1
+        else:
+            self.coords[direction] += 1
